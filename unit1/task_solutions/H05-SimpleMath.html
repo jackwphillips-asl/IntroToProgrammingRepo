@@ -1,0 +1,21 @@
+<script>
+// Get the input as a string
+var firstNumberString = prompt("What is the first number?");
+var secondNumberString = prompt("What is the second number?");
+// Convert the string responses into numbers
+var firstNumber = parseInt(firstNumberString);
+var secondNumber = parseInt(secondNumberString);
+// Calculate the sum, difference, product, quotient
+var sum = firstNumber + secondNumber;
+var difference = firstNumber - secondNumber;
+var product = firstNumber * secondNumber;
+var quotient = firstNumber / secondNumber;
+// Construct ouput
+var output = 
+	firstNumberString + " + "  + secondNumberString + " = " + sum + "\n" + 
+	firstNumberString + " - "  + secondNumberString + " = " + difference + "\n" + 
+	firstNumberString + " * "  + secondNumberString + " = " + product + "\n" + 
+	firstNumberString + " / "  + secondNumberString + " = " + quotient;		
+// Generate output
+alert(output);
+</script>
