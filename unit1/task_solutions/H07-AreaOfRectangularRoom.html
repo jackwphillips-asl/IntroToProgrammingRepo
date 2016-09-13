@@ -1,23 +1,21 @@
 <script>
-This program is full of bugs.
-
 var CONVERSION_FACTOR = 0.09290304;
 
 // Get input from user
-var lengthString = Prompt("What is the length of the room in feet?");
+var lengthString = prompt("What is the length of the room in feet?");
 var widthString = prompt("What is the width of the room in feet?");
 
 // Convert input from strings to numbers
-var legnth = parseInt(lengthString);
+var length = parseInt(lengthString);
 var width = parseInt(widthString);
 
 // Do the calculations to find the areas
 var areaSqFeet = length * width;
-var areaSqMeters = areaSqFeetCONVERSION_FACTOR;
+var areaSqMeters = areaSqFeet * CONVERSION_FACTOR;
 
 // Put together the output string
-var output = "The area is\n" areaSqFeet + " square feet\n" + areaSqMeters.toFixed(1) + " square meters";
+var output = "The area is\n" + areaSqFeet + " square feet\n" + areaSqMeters.toFixed(1) + " square meters";
 
 // Print the output
-alert(output;
+alert(output);
 </script>
