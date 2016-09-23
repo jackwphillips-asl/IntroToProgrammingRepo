@@ -1,0 +1,31 @@
+<script>
+// This program adds three non-negative prices together. And displays the total.
+
+// get the prices
+var price1String = prompt("Enter the first price.");
+var price2String = prompt("Enter the second price.");
+var price3String = prompt("Enter the third price.");
+
+// convert to numbers
+var price1 = parseFloat(price1String);
+var price2 = parseFloat(price2String);
+var price3 = parseFloat(price3String);
+
+// check if prices are negative
+if(price1 < 0) {
+	price1 = 0;
+}
+if(price2 < 0) {
+	price2 = 0;
+}
+if(price3 < 0) {
+	price3 = 0;
+}
+
+// calculate total
+var total = price1 + price2 + price3;
+var message = "Total is " + total;
+
+// display message
+alert(message);
+</script>
