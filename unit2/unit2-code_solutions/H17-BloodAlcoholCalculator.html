@@ -1,0 +1,49 @@
+<script>
+/* 
+ * This program checks if the user's blood alcohol level is less than 
+ * 0.08 and therefore legal to drive.
+ */
+
+// Set the constants
+var LEGAL_BAC = 0.08;
+var MALE = 0.68;
+var FEMALE = 0.55;
+
+// Get the user input
+var numDrinksString = prompt("How many drinks have been consumed?");
+var weightString = prompt("What is the body weight in pounds?");
+var hoursString = prompt("How many hours has it been since the last drink?");
+var gender = prompt("Is it a man or a woman?");
+
+// Convert inputs to numbers
+var numDrinks = parseInt(numDrinksString);
+var weight = parseInt(weightString);
+var hours = parseInt(hoursString)
+
+// declar variables
+var bac, ratio, output;
+
+// set the ratio depending on gender response
+if (gender.toLowerCase() == "woman") {
+	ratio = FEMALE;
+} else if (gender.toLowerCase() == "man") {
+	ratio = MALE;
+}
+
+// calculate the BAC
+bac = ((numDrinks * 14) / (weight * 4.54 * ratio)) - (hours * 0.015);
+
+// Test to see if bac is low enough.
+output = "Your blood alcohol level is " + bac.toFixed(3) + ".";
+
+if (bac >= LEGAL_BAC) {
+	output += " You cannot legally drive.";
+}
+else {
+	output += " You can legally drive.";
+}
+
+// Display output
+alert(output);
+
+</script>
