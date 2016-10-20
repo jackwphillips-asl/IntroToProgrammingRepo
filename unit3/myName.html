@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+	<title>MyName</title>
+</head>
+
+<body>
+	<script>
+		var name = prompt("What's your name?");
+		var timesStr = prompt("How many times would you like to see it?");
+		times = parseInt(timesStr);
+
+		for (var i=0; i<times; i++) {
+			var para = document.createElement("p");
+			var text = document.createTextNode(name);
+			para.appendChild(text);
+			document.body.appendChild(para);
+		}
+	</script>
+</body>
+</html>
