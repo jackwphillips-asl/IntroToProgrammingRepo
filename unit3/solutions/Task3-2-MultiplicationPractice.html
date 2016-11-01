@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task 3-2 - Multiplication Practice</title>
+</head>
+<body>
+	<script>
+	/* 
+	 * This is a flashcard app to help with multiplication
+	 *
+	 */
+
+	// Welcome the user
+	alert("Let's get multiplyin'!! (Type Q to quit)");
+	// Make sure the game plays at least once
+	var play = true;
+	// Keep track of score
+	var score = 0;
+
+	// The main game loop. Will quit if playAgain == "n"
+	while (play) {
+		var MIN = 1;
+		var MAX = 12;
+
+		// Calculate random numbers and product
+		var randomNumber1 = Math.floor((MAX-MIN+1) * Math.random()) + MIN;
+		var randomNumber2 = Math.floor((MAX-MIN+1) * Math.random()) + MIN;
+		var answer = randomNumber1 * randomNumber2;
+		
+		// get the user's guess
+		var guessString = prompt(randomNumber1 + " x " + randomNumber2);
+		
+		// determine if answer was correct, incorrect, or quit
+		if(guessString.toLowerCase() == "q") {
+			play = false;
+		} else if (parseInt(guessString) == answer) {
+			alert("Correct!");
+			score = score + 1;
+			alert("Your score is " + score);
+		} else {
+			alert("Sorry. The correct answer was " + answer);
+			alert("Your score is " + score);
+		}
+	}
+
+	// display final score on webpage
+	var p = document.createElement("p");
+	p.appendChild(document.createTextNode("Your final score is " + score));
+	document.body.appendChild(p);
+
+	p = document.createElement("p");
+	p.appendChild(document.createTextNode("Goodbye"));
+	document.body.appendChild(p);
+
+	</script>
+</body>
+</html>
