@@ -1,0 +1,30 @@
+<doctype! html>
+<html>
+<head>
+	<title>Order Football Tickets</title>
+	<link rel="stylesheet" type="text/css" href="footballStyle.css">
+</head>
+<body>
+	<h1>Order Football Tickets</h1>
+	<script src="football.js"></script>
+	<div id="content">
+		<h2>Please select from the following items:</h2>
+		<h3>Type of Seating</h3>
+		<select id="seats" onchange="changeSeats()">
+			<option value="default">Select Seating Option</option>
+			<option value="seatsA">Seating A (&pound;50)</option>
+			<option value="seatsB">Seating B (&pound;40)</option>
+			<option value="seatsC">Seating C (&pound;20)</option>
+		</select>
+		<h3>Number of Tickets</h3>
+		<input type="number" id="numTickets" value="1">
+		<h3>Meal Deal</h3>
+		<input type="radio" name="mealDeal" id="yesMealDeal" onchange="enableLarge()"> Drink and Chips Meal Deal (&pound;5)
+		<label><input type="checkbox" id="extraLarge" disabled="disabled"> Extra Large (&pound;2)</label><br>
+		<input type="radio" name="mealDeal" id="noMealDeal" onchange="enableLarge()"> No Meal Deal<br><br><br>
+		<button onclick="calculateTotal()">Calculate Total</button>
+	</div>
+	<div id="content2"></div>
+</body>
+</html>
+</doctype!>
