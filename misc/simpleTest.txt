@@ -1,1 +1,1 @@
-This is a simple text file. I want to see if it gets synced in cloud9
+Now I've changed the file. Goodbye.
