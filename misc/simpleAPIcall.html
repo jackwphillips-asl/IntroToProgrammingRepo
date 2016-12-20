@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple API Call</title>
+	<style type="text/css">
+	
+
+	</style>
+</head>
+<body>
+	<h1>Pokemon call!</h1>
+	<div id="info" >
+		<img id="pic" >
+		<p id="name" ></p>
+	</div>
+	<button onclick="randomPic()">Random Pokemon</button>
+	
+	<script type="text/javascript">
+		randomPic();
+
+		function randomPic() {
+			var min = 1;
+			var max = 50;
+			var randNum = Math.floor((max-min+1) * Math.random()) + min;
+			var url = constructPokeURL(randNum);
+			var poke_info = makeRequest(url);
+			var img_url = poke_info.img;
+			var name = poke_info.name;
+			var imgElement = document.getElementById("pic");
+			pic.src = img_url;
+
+			var pElement = document.getElementById("name");
+			pElement.innerHTML = name;
+		}
+
+		function constructPokeURL(num) {
+			var url = "http://pokeapi.co/api/v2/pokemon/" + num + "/";
+			return url;
+		}
+
+		function makeRequest(url) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", url, false);
+			xhr.send();
+			var data = JSON.parse(xhr.responseText);
+			var name = data.name;
+			var img_url = data.sprites.front_default;
+			return {"name": name, "img": img_url};
+		}
+
+	</script>
+</body>
+</html>
