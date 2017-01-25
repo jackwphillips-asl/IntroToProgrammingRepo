@@ -1,0 +1,24 @@
+<script>
+// gallons per square feet
+var CONVERSION_FACTOR = 1/350;
+
+// Get input from user
+var lengthString = prompt("What is the length of the ceiling in feet?");
+var widthString = prompt("What is the width of the ceiling in feet?");
+
+// Convert input from strings to numbers
+var length = parseInt(lengthString);
+var width = parseInt(widthString);
+
+// Do the calculations to find the area and the number of gallons needed
+var areaSqFeet = length * width;
+var paintNeeded = areaSqFeet * CONVERSION_FACTOR;
+var gallonsOfPaint = Math.ceil(paintNeeded);
+
+// Put together the output string
+var output = "You will need to purchase " + gallonsOfPaint + 
+	" gallons of\npaint to cover " + areaSqFeet + " square feet.";
+
+// Print the output
+alert(output);
+</script>

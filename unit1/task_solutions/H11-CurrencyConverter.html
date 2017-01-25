@@ -1,0 +1,23 @@
+<script>
+
+// Get input from user
+var poundsString = prompt("How much in pounds are you exchanging?");
+var xrateString = prompt("What is the current exchange rate?");
+
+// Convert input from strings to numbers
+var pounds = parseFloat(poundsString);
+var xrate = parseFloat(xrateString);
+
+// Do the calculations to find amount in dollars
+var dollars = pounds * xrate;
+// Round up to the nearsest cent
+var roundedDollars = Math.ceil(dollars*100) / 100;
+// Turn roundedDollars to string with two decimal places.
+var roundedDollarsString = roundedDollars.toFixed(2)
+
+// Put together the output string
+var output = "\u00A3" + poundsString + " at an exchange rate of " + xrateString + " is $" + roundedDollarsString;
+
+// Print the output
+alert(output);
+</script>
