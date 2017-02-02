@@ -1,0 +1,40 @@
+<script>
+/* 
+ * This program converts a temperature from Fahrenheit to Celsius or
+ * the other way around.
+ */
+
+// Declare variables
+var outputName, inputName, outputTemp;
+
+// Get the user input for the output scale
+var outputScale = prompt("Enter C to convert from Fahrenheit to Celsius.\nEnter F to convert from Celsius to Fahrenheit.\nYour choice:");
+
+// Determine the input and output scales, set the strings
+if (outputScale.toLowerCase() == "f") {
+	outputName = "Fahrenheit";
+	inputName = "Celsius";
+} else if (outputScale.toLowerCase() == "c") {
+	outputName = "Celsius";
+	inputName = "Fahrenheit";
+}
+
+// Set the input string appropriately, get starting temp
+inputString = "Please enter the temperature in " + inputName + ":";
+var inputTempString = prompt(inputString);
+
+// Do the appropriate conversion
+var inputTemp = parseInt(inputTempString); // convert to number for calcs
+if(outputName == "Fahrenheit") {
+	outputTemp = (inputTemp * 9 / 5) + 32;
+} else {
+	outputTemp = (inputTemp - 32) * 5 / 9;
+}
+
+// construct output string
+var outputString = "The temperature in " + outputName + " is " + outputTemp.toFixed(2);
+
+// Display output
+alert(outputString);
+
+</script>
