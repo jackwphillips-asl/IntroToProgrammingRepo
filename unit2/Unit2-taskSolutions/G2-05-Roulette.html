@@ -15,9 +15,14 @@
        var ODDS = 35;
        
        //Prompt user for bets
-       var bet1 = prompt("Enter the first number to bet on:");
-	   var bet2 = prompt("Enter the second number to bet on:");
-       var betAmount = prompt("Enter your bet in pounds:");
+       var bet1String = prompt("Enter the first number to bet on:");
+	   var bet2String = prompt("Enter the second number to bet on:");
+       var betAmountString = prompt("Enter your bet in pounds:");
+       
+       //Parse strings
+       var bet1 = parseInt(bet1String);
+       var bet2 = parseInt(bet2String);
+       var betAmount = parseInt(betAmountString);
        
        //Generate random number
        var randomNum = Math.floor((MAX-MIN+1)*Math.random()) + MIN;
