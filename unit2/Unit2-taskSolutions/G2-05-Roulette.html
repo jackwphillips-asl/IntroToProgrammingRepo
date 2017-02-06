@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>G5 Roulette</title>
+  </head>
+  <body>
+    <script>
+      /* A Roulette simulator. Two bets with 35 to 1 payout 
+       * Intro to Programming. 2017.
+       */
+       
+       //Set max and min for Roulette wheel
+       var MAX = 36;
+       var MIN = 1;
+       var ODDS = 35;
+       
+       //Prompt user for bets
+       var bet1 = prompt("Enter the first number to bet on:");
+	   var bet2 = prompt("Enter the second number to bet on:");
+       var betAmount = prompt("Enter your bet in pounds:");
+       
+       //Generate random number
+       var randomNum = Math.floor((MAX-MIN+1)*Math.random()) + MIN;
+       
+       //Generate message
+       var message = "The winning number was " +randomNum;
+       
+       //Determine if player is a winner
+       if(bet1 == randomNum || bet2 == randomNum) {
+         var winnings = betAmount * ODDS;
+         message += "\nYou won! Congratulations. Please collect " + winnings + " pounds.";
+       } else {
+         message += "\nSorry, the house wins and that means you lose. You lost "+ betAmount + " pounds.";
+       }
+       
+       //Display message
+       alert(message);
+    </script>
+  </body>
+</html>

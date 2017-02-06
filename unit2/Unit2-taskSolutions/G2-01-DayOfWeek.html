@@ -1,0 +1,42 @@
+<script>
+// This program returns a day of the week given a number 
+// 1 through 7
+
+// Constants for Days
+var DAY1 = "Monday";
+var DAY2 = "Tuesday";
+var DAY3 = "Wednesday";
+var DAY4 = "Thursday";
+var DAY5 = "Friday";
+var DAY6 = "Saturday";
+var DAY7 = "Sunday";
+
+var dayString = prompt("Enter a number 1 through 7:");
+var dayNum = parseInt(dayString);
+
+var dayMessage;
+
+// Set message depending on dayNum
+if(dayNum == 1) {
+	dayMessage = DAY1;
+} else if(dayNum == 2) {
+	dayMessage = DAY2;
+} else if(dayNum == 3) {
+	dayMessage = DAY3;
+} else if(dayNum == 4) {
+	dayMessage = DAY4;
+} else if(dayNum == 5) {
+	dayMessage = DAY5;
+} else if(dayNum == 6) {
+	dayMessage = DAY6;
+} else if(dayNum == 7) {
+	dayMessage = DAY7;
+} else {
+	dayMessage = "Invalid.";
+}
+
+// Display message
+alert(dayMessage);
+
+
+</script>

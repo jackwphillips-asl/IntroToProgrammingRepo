@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guessing Game</title>
+</head>
+<body>
+  <script>
+    /* A simple guessing game app with a single guess.
+     * Intro to Programming. 2017
+     */
+
+    // Prompt user for input
+    var min = parseInt(prompt("Enter the minimum number:"));
+	var max = parseInt(prompt("Enter the maximum number:"));
+    var guess = parseInt(prompt("Enter your guess:"));
+
+    // Generate random number
+    var randomNumber = Math.floor((max-min+1)*Math.random()) + min;
+
+    // Set message
+    var message = "You guessed " + guess;
+
+    // Determine if guess was correct
+    if(guess < randomNumber) {
+    	message += "\nToo low.\nThe number was " + randomNumber;
+    } else if (guess > randomNumber) {
+    	message += "\nToo high.\nThe number was " + randomNumber;
+    } else {
+    	message += "\nYou got it! Good guess.";
+    }
+
+    // Display message
+    alert(message);
+  </script>
+</body>
+</html>
