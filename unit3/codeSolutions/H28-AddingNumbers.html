@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task 28 - Adding Numbers</title>
+</head>
+<body>
+	<script>
+	/* 
+	 * This program prompts the user for five numbers and then prints
+	 * the total on the webpage.
+	 */
+
+	 // Set a constant for number of prompts
+	 var NUM_PROMPTS = 5;
+
+	 // Declare and initialize the total.
+	 var total = 0;
+
+	 for (var i=0; i<NUM_PROMPTS; i++) {
+	 	var numString = prompt("Enter a number:");
+	 	var num = parseInt(numString);
+	 	total += num;
+	 }
+
+	var p = document.createElement("p");
+	p.textContent = "The total is " + total;
+	document.body.appendChild(p);
+
+	</script>
+</body>
+</html>
