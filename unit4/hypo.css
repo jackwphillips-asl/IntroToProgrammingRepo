@@ -1,0 +1,26 @@
+body {
+	font-family: Tahoma, sans-serif;
+}
+
+h1 {
+	color: gray;
+	font-size: 300%;
+	text-decoration: underline;
+}
+
+div {
+    border: 5px solid aqua;
+    width: 300px;
+}
+
+p {
+	font-family: "Times New Roman";
+    color: silver;
+}
+
+input[type="button"] {
+	float: right;
+	font-family: Times New Roman;
+	background-color: olive;
+	margin-top: 5px;
+}
