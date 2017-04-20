@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Credit Card Validator</title>
+	</head>
+
+	<body>
+	    Enter credit card number:
+	    <input type="text" id="ccNumber">
+	    <select id="ccType">
+	      <option value="visa">Visa</option>
+	      <option value="mastercard">MasterCard</option>
+	      <option value="amex">American Express</option>	      	      
+	    </select>
+	    <br>
+	    <input type="button" value="Validate" onclick="validate()">
+	    <p id="message"></p>
+		<script src="luhn.js"></script>
+		<script src="creditCardValidator.js"></script>
+	</body>
+</html>
