@@ -9,10 +9,10 @@ function setup() {
 
 function draw() {  
 	drawCheeseWithColor(myYellow);
-	drawChesseWithColor(myBlue);
+	drawCheeseWithColor(myBlue);
 }
 
-function drawCheeseWithPosition(c) {
+function drawCheeseWithColor(c) {
 	// TODO Add code here that draws cheese at 
     // a random location with color c
 }
