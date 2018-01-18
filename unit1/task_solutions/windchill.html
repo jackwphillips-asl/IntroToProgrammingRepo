@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head><title>Windchill</title></head>
+<body>
+<script>
+// This program calculates the windchill give an air 
+// temperature in Fahrenheit and a wind speed in miles 
+// per hour. September 2016.
+
+// Define constants
+var con1 = 35.74;
+var con2 = 0.6215;
+var con3 = 0.4275;
+var con4 = 35.75;
+var con5 = 0.16;
+
+// Get user input
+var airTempString = prompt("Enter the air temperature (F):");
+var windSpeedString = prompt("Enter the wind speed (mph):");
+
+// Convert input to numbers
+var airTemp = parseFloat(airTempString);
+var windSpeed = parseFloat(windSpeedString);
+
+// Do the calucation
+var windChill = con1 + con2 * airTemp + (con3 * airTemp - con4) * Math.pow(windSpeed, con5);
+
+// Construct message
+var message = "With an air temperature of " + airTemp + " and wind speed of " + windSpeed + ", the windchill is " + windChill.toFixed(2) + " degrees (F)";
+
+// Display message
+alert(message);
+
+</script>
+</body>
+</html>
