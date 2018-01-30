@@ -1,0 +1,44 @@
+<html>
+<head></head>
+<body>
+<script>
+// Define an array of the names in class;
+var classList = ["Sophie", "Thalia", "Lina", "Pete", "Gabe", "Anna", "Cassidy", "Shuma", "Jackson", "Matthew", "Theo", "Nima", "Annie", "Kiko"];
+
+var shuffledClassList = shuffle(classList);
+printArray(shuffledClassList, 2);
+
+// Given an array will display the array in the javascript console
+function printArray(array, groupSize) {
+	for(var i=0; i<array.length; i=i+groupSize) {
+		var group = "";
+		for (var j=0; j<groupSize; j++) {
+			group +=  array[i+j] + ", ";
+		}
+		console.log(group);
+	}
+}
+
+
+// Given an array will shuffle the array
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+</script>
+</body>
+</html>
