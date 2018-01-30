@@ -1,0 +1,30 @@
+<script>
+/* 
+ * This program checks whether a user's age is old enough to drive 
+ * legally in the UK
+ */
+
+// Set driving age
+var UK_DRIVER_AGE = 17;
+
+// Get the user input
+var userAgeString = prompt("What is your age?");
+
+// Convert input to number
+var userAge = parseInt(userAgeString);
+
+// Set up the empty output string
+var output = "";
+
+// Test to see if age is old enough and set output appropriately
+if (userAge >= UK_DRIVER_AGE) {
+	output = "You are old enough to drive legally."
+}
+else {
+	output = "You are not old enough to drive legally."
+}
+
+// Display output
+alert(output);
+
+</script>
