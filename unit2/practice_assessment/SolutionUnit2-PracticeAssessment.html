@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Car Troubleshooter</title></head>
+  <body>
+	 <script>
+	 /* This is a practice assessment. The program 
+	  * diagnoses your car trouble. 
+	  * Name and Date.
+	  */
+
+	 // Welcome
+	 alert("Welcome to our car troubleshooter. Let's begin");
+
+	 var response;
+
+	 response = prompt("Is the car silent when you turn the key? (y/n)");
+
+	 // Level 1
+	 if (response == "y") {
+	   response = prompt("Are the battery terminals corroded?");
+ 
+	   // Level 2
+	   if (response == "y") {
+		 alert("Clean the terminals and try again.")
+	   } else {
+		 alert("Replace the cables and try again.");
+	   }
+	 } else {
+	   response = prompt("Does the car make a clicking noise?");
+  
+	   // Level 2
+	   if (response == "y") {
+		 alert("Replace the battery.");
+	   } else {
+		 response = prompt("Does the car crank up but fail to start?");
+	
+		 // Level 3
+		 if (response == "y") {
+		   alert("Check spark plug connections.");
+		 } else {
+		   response = prompt("Does the engine start and then die?");
+	  
+		   // Level 4
+		   if (response == "y") {
+			 response = prompt("Does your car have fuel injection?");
+		
+			 // Level 5
+			 if (response == "y") {
+			   alert("Get it in for service.");
+			 } else {
+			   alert("Check to ensure the choke is opening and closing.");
+			 }
+		   } else {
+			 // Generate random number to give random message.
+			 var MAX = 10;
+			 var MIN = 1;
+			 var randomNum = Math.floor((MAX - MIN + 1) * Math.random()) + MIN;
+		
+			 // Level 5
+			 if (randomNum <= 3) {
+				 alert("Good luck, I have no idea what's wrong.");
+			 } else {
+				 alert("Sell the clunker.");
+			 }
+		   }
+		 }
+	   }
+	 }
+	 </script>
+  </body>
+</html>
