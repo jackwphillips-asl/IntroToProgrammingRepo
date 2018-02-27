@@ -4,7 +4,7 @@
 */
 
 // Get input from user
-var kiloInput = promt("Please enter a distance in kilometers.");
+var kiloInput = prompt("Please enter a distance in kilometers.");
 var kiloNum = parseFloat(kiloInput);
 
 // Convert the input to miles
