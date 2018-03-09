@@ -19,5 +19,5 @@ function makeARecommendation() {
 	//declare a variable and save the paragraph called "message"
 	var messageParagraph = document.getElementById("message");
 	// change the text of the paragraph
-	messageParagraph.innerHTML = "Great choices!";
+	messageParagraph.textContent = "Great choices!";
 }
