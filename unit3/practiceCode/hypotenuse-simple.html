@@ -5,14 +5,15 @@
 </head>
 <body>
 	<script>
-		var sideA = 3;
-		var sideB = 4;
+		var sideA = 7;
+		var sideB = 24;
 		var hypo = hypotenuse(sideA, sideB);
 		alert("Hypotenuse: " + hypo);
 		
+		// returns the hypotenuse given two number arguments representing sides of right triangle
 		function hypotenuse(a, b) {
-		  //Fill in the function here below...
-		
+		  var sum = a*a + b*b;
+		  return Math.sqrt(sum);
 		}
 	</script>
 </body>
