@@ -10,7 +10,7 @@ function calculate() {
   
   // Display on webpage
   var output = document.getElementById("output");
-  output.textContent = "The insurance cost is " + cost;
+  output.textContent = "The insurance cost is " + cost
 }
 
 // helper function
