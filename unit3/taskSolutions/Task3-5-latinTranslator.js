@@ -1,14 +1,19 @@
+/* 
+  Add functionality to Task3-5 Latin Translator. Each function adds text when a button
+  pressed.
+*/
+
 function showSinister() {
 	var tableElement = document.getElementById("sinister");
-	tableElement.innerHTML = "Left"
+	tableElement.textContent = "Left"
 }
 
 function showDexter() {
 	var tableElement = document.getElementById("dexter");
-	tableElement.innerHTML = "Right"
+	tableElement.textContent = "Right"
 }
 
 function showMedium() {
 	var tableElement = document.getElementById("medium");
-	tableElement.innerHTML = "Center"
+	tableElement.textContent = "Center"
 }
