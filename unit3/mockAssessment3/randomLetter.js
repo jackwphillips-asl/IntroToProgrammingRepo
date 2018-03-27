@@ -3,7 +3,8 @@ function generateRandomLetter() {
 	
 }
 
+// Must use this function above
 function convertNumber2Letter(num) {
-  // Your code here
-
+  var letter = String.fromCharCode(num);
+  return letter;
 }
