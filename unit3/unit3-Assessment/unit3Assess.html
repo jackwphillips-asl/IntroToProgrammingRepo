@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Unit 3 Assessment</title>
+    <link rel="stylesheet" type="text/css" href="unit3Assess.css">
+</head>
+
+<body>
+    <h1>Functions and HTML Elements</h1>
+    <div id="question1">
+        <h2>Area of a Circle</h2>
+        <input type="number" id="radiusBox">Radius</input><br>
+        <input type="button" onclick="processInput()" value="Show me the Area!" /><br>
+    </div>
+    <hr>
+    <div id="question2">
+        <h2>Adaptable Dice</h2>
+        <input type="number" id="die1" value=6 min=1>Number of sides on the first die</input><br>
+        <input type="number" id="die2" value=6 min=1>Number of sides on the second die</input><br>
+        <input type="button" id="rollButton" onclick="getAndRollDice()" value="Roll Dice"><br>
+        <p>Outcome: <input type="text" id="outcome"></input>
+        </p>
+    </div>
+    <hr>
+    <div id="question3">
+        <h2>Passcode Check <img id="logo" src="blank-tick.png" width = "16" height="16"/></h2>
+        <input type="password" id="passBox" onchange="checkPass()">Enter your passcode</input>
+        <br><div id="statusText"> Status: unconfirmed </div>
+    </div>
+    <script src="unit3Assess.js"></script>
+</body>
+
+</html>
