@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <title>The Coordinate Plane</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <script>
+    function setup() {
+    	createCanvas(500, 500);
+		drawRectWithAxesAtOrigin();
+    }
+    
+    function drawRectWithAxesAtOrigin() {
+    	
+    	//rectMode(CENTER);
+    	rectMode(CORNER);
+    	// draw rectangle
+    	fill(200);
+    	rect(0, 0, 30, 50);
+    	
+    	// draw axes
+    	line(0, 0, 60, 0);
+    	line(0, 0, 0, 60);
+    	
+		// draw text for axes
+    	fill(0);
+    	text("+x", 70, 10);
+    	text("+y", 0, 70);
+    }
+    
+    </script>
+</body>
+</html>
