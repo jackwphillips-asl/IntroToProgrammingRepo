@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<title>My Pizza Shop</title>
+	<link rel="stylesheet" type="text/css" href="pizzaShop.css">
+</head>
+<body>
+	<h1>My Pizza Shop</h1>
+	<div id="content">
+		<h2>Please select from the following items:</h2>
+		<h3>Crust:</h3>
+		<select id="crust">
+			<option value="thin">Thin - &pound;10</option>
+			<option value="thick">Thick - &pound;10</option>
+			<option value="glutenFree">Gluten Free - &pound;20</option>
+		</select>
+		<h3>Cheese:</h3>
+		<input type="radio" name="cheese" id="yesCheese" onchange="enableExtra()"> Cheese - &pound;5
+		<label><input type="checkbox" id="extraCheese" disabled="disabled"> Extra - &pound;2</label><br>
+		<input type="radio" name="cheese" id="noCheese" onchange="enableExtra()"> No Cheese<br>
+		<h3>Sauce:</h3>
+		<select id="sauce">
+			<option value="marinara">Marinara</option>
+			<option value="white">White</option>
+			<option value="noSauce">None</option>
+		</select>
+		<h3>Toppings - &pound;3 each:</h3>
+		<label><input type="checkbox" id="none" onchange="noneSelected()"> None</label><br>
+		<label><input type="checkbox" id="pepperoni"> Pepperoni</label><br>
+		<label><input type="checkbox" id="sausage"> Sausage</label><br>
+		<label><input type="checkbox" id="ham"> Ham</label><br>
+		<label><input type="checkbox" id="olives"> Olives</label><br>
+		<label><input type="checkbox" id="pineapple"> Pineapple</label><br>
+		<label><input type="checkbox" id="mushrooms"> Mushrooms</label><br><br>
+		<button onclick="calculateTotal()">Calculate Total</button>
+	</div>
+	<div id="content2">
+		<p id="output"></p>
+	</div>
+	<script src="pizzaShop.js"></script>
+</body>
+</html>

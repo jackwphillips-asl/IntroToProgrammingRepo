@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Escape Room</title>
+</head>
+
+<body>
+    <script src="practice1.js"></script>
+    <div id="game" width="500" height="200" style="background-color:lightblue">
+        <select id="lever">
+        <option value="unanswered">How to use the lever? ...</option>
+        <option value="forward">Throw lever forward</option>
+        <option value="reverse">Throw lever into reverse</option>
+        </select>
+        <select id="knob">
+            <option value="unanswered">What to do with the knob? ...</option>
+            <option value="left"> Turn knob left</option>
+            <option value = "right">Turn knob right</option>
+            <option value="leave">Leave knob alone</option>
+        </select>
+        <br>
+        <p id="instructionText">Make your selections then check!</p>
+        <input type="button" value="Attempt Escape" onclick="checkCombo()"></input>
+    </div>
+</body>
+
+</html>
