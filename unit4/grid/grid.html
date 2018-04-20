@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <title>Grid Example</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <script>
+    var character = "A"
+    
+    function setup() {
+    	createCanvas(500, 500);
+    	background(0);
+    	drawGrid();
+    }
+    
+    function generateARandomLetter() {
+    	var randomNum = random(65, 90);
+    	var randomCharacter = String.fromCharCode(randomNum);
+    	return randomCharacter;
+    }
+    
+    function mousePressed() {
+    	character = generateARandomLetter();
+    	background(0);
+    	drawGrid();
+    }
+    
+    function drawGrid() {
+		var xspacing = 12;
+		var yspacing = 15;
+	    var x = xspacing;
+	    var y = yspacing + 10;
+	    textSize(20);
+	    fill(255);
+    	while(x < width - xspacing) {
+    		y = yspacing+10;
+    		while(y < height - yspacing) {
+    			text(character, x, y);
+    			y = y + yspacing;
+    		}
+    		x = x + xspacing;
+    	}
+    }
+    </script>
+</body>
+</html>

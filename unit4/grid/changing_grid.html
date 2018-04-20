@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title>Grid Example</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <script>
+    function setup() {
+    	createCanvas(500, 500);
+    	background(0);
+    	fill(255);
+    	var x = 0;
+    	var y = 10;
+    	// row of xs
+    	while(x < width) {
+    		// column of ys
+    		while(y < height) {
+	    		text("A", x, y);
+	    		y = y + 10;
+	    	}
+	    	y = 10;
+	    	x = x + 10;
+	    }
+    	
+    }    
+    </script>
+</body>
+</html>
