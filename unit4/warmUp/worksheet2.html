@@ -1,0 +1,43 @@
+<script>
+
+// Print column of #
+var message = "";
+var i = 0;
+
+while (i < 5){
+	message = message + "#\n";
+	i = i + 1;
+}
+alert(message);
+
+/////////////////////////////////
+
+// Print row of #
+var row = "";
+var j = 0;
+while (j < 5) {
+	row = row + "#";
+	j = j + 1;
+}
+alert(row);
+
+//////////////////////////////////
+
+// Print column of #
+var message = "";
+var i = 0;
+
+while (i < 5){
+	// Print row of #
+	var row = "";
+	var j = 0;
+	while (j < i + 1) {
+		row = row + "#";
+		j = j + 1;
+	}
+	message = message + row + "\n";
+	i = i + 1;
+}
+alert(message);
+
+</script>
