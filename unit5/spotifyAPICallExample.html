@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Spotify API Example Using Fetch</title>
+</head>
+
+<body>
+	<h1>Spottify Artist Search</h1>
+	Enter an artist: <input type="text" id="artist" /><button onclick='spotifySearch()'>Search</button>
+	<ul id="artist_list"></ul>
+	<script>
+		var CLIENT_ID = "e97dc34538e847ce9072c3869880ae08" //replace with your Spotify Client ID;
+    // Make sure that your site is 'white-listed' in the spotify dashboard
+		var MY_SITE_URL = "https://introtoprogramming-demo-jackwphillips.c9users.io/IntroToProgrammingRepo/unit5/spotifyAPICallExample.html" // replace with your site's URL
+		var theData;
+		var authorization_code;
+
+		//Check to see if user has logged in
+		if (window.location.hash) {
+			console.log("Successfully authorized");
+			authorization_code = window.location.hash.substr(1).split("&")[0].split("=")[1];
+		}
+		// If user hasn't logged in, seek authorization
+		else {
+			console.log("No authorization. Redirecting...");
+			var redirect_uri = encodeURI(MY_SITE_URL);
+			var AUTHORIZATION_URL = "https://accounts.spotify.com/authorize?client_id=" + CLIENT_ID + "&redirect_uri=" + redirect_uri + "&response_type=token";
+			window.location.replace(AUTHORIZATION_URL);
+
+		}
+
+
+		// This is the code that runs when you hit the button.  
+		function spotifySearch() {
+      // Get name of artist in box
+			var artistName = document.getElementById("artist").value;
+			// Make sure the text is safe for URLs. E.g., replace space with %20
+      var encodedName = encodeURI(artistName);
+      // Put together the spotify search url
+			var searchURL = "https://api.spotify.com/v1/search?q="+encodedName+"&type=artist";
+      // Use fetch to go get the data (you shouldn't need to change any of this
+			fetch(searchURL, { headers: { "Authorization": "Bearer " + authorization_code } })
+				.then(function(response) {
+					return response.json();
+				})
+				.then(function(json) {
+					processData(json);
+				});
+		}
+		
+    // This is the code that you should change to process the data how you wish. I just make a simple list
+		function processData(data) {
+			// Code to do something with the json data
+			theData = data;
+      // Look at the console to see all the information you get from the json
+			console.log(theData);
+			var artistList = "";
+			for (var i=0; i<theData.artists.items.length; i++) {
+				artistList = artistList + "<li>" + theData.artists.items[i].name + "</li>"
+			}
+			document.getElementById("artist_list").innerHTML = artistList;
+		}
+	</script>
+</body>
+
+</html>
